@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+
+</script>
+<body>
+
+    <?php
+        require_once 'connection.php';
+    
+        $sql2 = "select * from states";
+       
+        $result2 = mysqli_query($con,$sql2);
+        while($row = mysqli_fetch_assoc($result2)){
+
+            $jarray2[]= $row;   
+            
+        }
+        
+        // echo  json_encode($jarray); echo "</br></br>";
+      json_encode($jarray2);
+        // echo "<pre>";
+        // print_r($jarray);
+        // echo "</pre>";
+    
+    ?>    
+  <script>
+ 
+  </script>
+</body>
+</html>
+
+<?php 
+    require_once 'connection.php';
+    $country_id = $_GET['country_id'];
+    $state_id = $_GET['state_id'];
+    
+    if($country_id != ""){   
+        $sql = "select id,name from states where country_id = $country_id";
+        $res = mysqli_query($con, $sql);
+        $jarray = array();
+        while($row = mysqli_fetch_assoc($res)){
+            $jarray[] = $row['id'];
+        echo $jarray;
+        }
+        
+        
+    }
+    if($state_id != ""){  
+
+        $sql = "select id,name from cities where state_id = $state_id";
+        $res = mysqli_query($con, $sql);
+        $jarray2 = array();        
+        while($row = mysqli_fetch_assoc($res)){
+            $jarray2[] = $row;
+        
+        }
+    }
+    echo json_encode($jarray);
+    echo json_encode($jarray2);
+?>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <div class="container ">
+        <h2>Form</h2>
+        
+            <form action="/action_page.php" method="POST">
+        
+                    <div class="">
+                        <label for="name">Name:</label>
+
+                        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+                    </div>
+
+<!-- 
+                <div class="row">
+                    <div class="col-1 form-group">
+                        <label for="name">Url:</label>
+                    </div>
+                    <div class="col-2 form-group col-sm">
+                        <input type="text" class="form-control" id="url" placeholder="Enter url" name="url">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1 form-group">
+                        <label for="email">Email:</label>
+                    </div>
+                    <div class="col-2 form-group col-sm">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1 form-group">
+                        <label for="pwd">Password:</label>
+                    </div>
+                    <div class="col-2 form-group col-sm">
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1 form-group">
+                        <label for="pwd">Password conformation:</label>
+                    </div>
+                    <div class="col-2 form-group col-sm">
+                        <input type="password" class="form-control" id="pwd1" placeholder="Re-Enter password"
+                            name="pswd">
+                    </div>
+                </div>
+            
+                <div class="row " id="maindiv">
+                    <div class="col-1  col-md-9 form-group" >
+                        <label for="members"> Number of memebers:</label>
+                        <input type="number" class="form-control " id="members" name="members">
+                        
+                    </div>
+                    <div class="col-1 col-md-9 form-group ">
+                        <label for="percentage"> Percentage:</label>
+                        <input type="number" class="form-control" id="percentage" name="percentage">
+                        
+                    </div>
+                    <div class="col-2 form-group ">
+                      
+                        <button type="button" class="btn btn-danger" onclick="removeInput()">-</button>
+                    </div>
+                </div>
+                <div class="row clonediv">
+
+                   
+
+                </div>
+                <div class="row">
+                    <div class="col-1 form-group col-lg">
+                        <button type="submit" class="btn btn-info">Save</button>
+                        <button id="cancel" name="cancel" class="btn btn-outline-secondary" value="1">Cancel</button>
+                    </div>
+                </div>
+        </div>
+ -->
+
+       
+        </form>
+    </div>
+    </div>
+    <button type="button" class="btn btn-success add" onclick="next()">+</button>
+    <script>
+        var i = 0;
+        
+
+        function next() {
+            var original = document.getElementById('maindiv');
+            var clone = original.cloneNode(true);
+            
+            
+            var x = original.parentNode.appendChild(clone);
+            console.log(x);
+            var xx= document.getElementsByClassName("clonediv").innerHTML = x.innerHTML;
+
+        }
+
+        var counter = 1;
+
+        function removeInput() {
+            var div = document.getElementById('copy').id;
+            console.log(div);
+
+        }
+    </script>
+
+</body>
+
+</html>

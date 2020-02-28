@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>JS_1</title>
+        <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            <script type="text/javascript">
+                function myfun1(){
+                    var x = document.getElementById('text').value;
+                    document.getElementById('demo').innerHTML =x;
+                }
+
+                //Show/Hide text
+                function myFunction() {
+                      var x = document.getElementById("hide");
+                      if (x.style.display === "none") {
+                        x.style.display = "block";
+                      }
+                }
+                function myFunction1() {
+                      var x = document.getElementById("hide");
+                      if (x.style.display === "block") {
+                        x.style.display = "none";
+                      }
+                }
+
+                //Show result of Price into Quantity.
+                function myfun3(){
+                    var x = document.getElementById('price').value;
+                    var y = document.getElementById('qty').value;
+
+                    document.getElementById('mul').innerHTML = x * y;
+                }
+                //convert Cel to fah.
+                function convert(degree){
+                  
+                  if(degree == 'cel'){
+                    var cel = document.getElementById('cec_to_fl').value * 9 / 5 + 32;
+                    document.getElementById('fah').value = Math.round(cel) ;
+                  }
+                  else{
+                    var f = (document.getElementById('fah').value -32 ) * 5 / 9;
+                    document.getElementById('cec_to_fl').value = Math.round(f);
+                  }
+                }  
+
+                //convert hour to min.
+                function time_convert(val){
+                 if (val == 's')
+                 {
+                    var hour = document.getElementById('s').value / 60;
+                    document.getElementById('m').value = hour;
+
+                 }
+                 else
+                 {
+                   var min = document.getElementById('m').value * 60;
+                   document.getElementById('s').value = min;
+                 }
+               }
+
+               function change(){
+                var display=document.getElementById('convert').value;
+                    if(display=="ctof"){
+                        document.getElementById('ctof').style.display="block";
+                        document.getElementById('time').style.display="none";
+                    }
+                    else if(display=="time"){
+                        document.getElementById('time').style.display="block";
+                        document.getElementById('ctof').style.display="none";
+                    }
+                    else{
+                        document.getElementById('ctof').style.display="block";
+                        document.getElementById('time').style.display="none";
+                    }
+               }
+            </script>
+            
+    </head>
+    <body onload="change()" >
+        <!-- Textbox data. --> 
+        <input type="text" placeholder="Enter text ! !" id="text" oninput="myfun1()">
+        <p id="demo" style="position: fixed" ></p><br/><br/><br/>
+        <hr>
+        <!-- Show result of Price into Quantity. -->
+        <h3>Show result of Price into Quantity.</h3>
+        <label>Price :</label>
+        <input type="text" placeholder="Price" id = "price" >
+        <label>Quantity :</label>
+        <input type="text" placeholder="Quantity" id = "qty" oninput="myfun3()" ><br/>
+        <p id="mul"></p>
+        <hr>
+        <!--HIDE AND SHOW -->
+         <p id="hide"style="display: block; position: fixed">HIDE AND SHOW</p><br/><br>
+        <input type="button"  class="bg-primary" value="Show Text" id="show"   onclick="myFunction()">
+        <input type="button" value="Hide Text" class="bg-primary"id="hide" onclick="myFunction1()">
+        <hr>
+        
+        <!-- Celsius to Fahrenheit converter -->
+        <select id="convert" onchange="change()">
+          <option value="temp">temprature</option>
+          <option value="time">Time</option>
+        </select><br/><br/>
+
+        <div id="ctof">
+        Celsius:<input type="number" id="cec_to_fl" placeholder="Value" onkeyup="convert('cel')"> = 
+        Fahrenheit:<input type="number" id="fah" placeholder="Value"onkeyup="convert('f')" >
+        <p id="dd"></p>
+      </div>
+      <!---Add Dropdown menu and make Time Converter-->
+      <div id="time">
+        Second:<input type="number" id="s" placeholder="Value" onkeyup="time_convert('s')"> = 
+        Min:<input type="number" id="m" placeholder="Value"onkeyup="time_convert('m')" >
+      </div>
+      <hr>
+
+      
+    </body>
+</html>

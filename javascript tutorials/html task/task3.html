@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Show result of Price into Quantity.
+        function myfun3() {
+            var x = document.getElementById('price').value;
+            var y = document.getElementById('qty').value;
+
+            document.getElementById('mul').innerHTML = x * y;
+        }
+    </script>
+    <h3>Show result of Price * Quantity.</h3>
+    <label>Price :</label>
+    <input type="text" placeholder="Price" id="price">X
+    <label>Quantity :</label>
+    <input type="text" placeholder="Quantity" id="qty" oninput="myfun3()">
+    <p id="mul"></p>
+
+</body>
+
+</html>

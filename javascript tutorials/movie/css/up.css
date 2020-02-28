@@ -1,0 +1,376 @@
+#site-content {
+    height: 100%;
+    width: 100%;
+}
+
+header.content>div.submedia {
+    height: 64px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #081c24;
+    width: 100%;
+    z-index: 999;
+    display: block;
+}
+
+header>div.content {
+    /* height: 111px; */
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    will-change: height;
+}
+
+#leftside {
+    /* padding-top:  */
+    margin-top: auto;
+    padding-top: 3px;
+    padding-left: 150px;
+    color: darkcyan;
+    font-size: 28px;
+    width: auto;
+    font-weight: 500;
+    font-weight: bold;
+
+}
+body {
+    /* display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    height: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    background-color: #fff;
+    color: #000;
+    font-display: auto; */
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    
+
+    /* /* font-size: 1em; */
+    -webkit-font-smoothing: antialiased;
+    /* -moz-osx-font-smoothing: grayscale; */
+}
+#loadMore {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+}
+
+#loadMore a {
+    background: #3f8cd4;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    padding: 15px 30px;
+    transition: all 0.25s ease-out;
+    -webkit-font-smoothing: antialiased;
+}
+
+#loadMore a:hover {
+    background-color: #042a63;
+}
+
+ul {
+    line-height: 1.4em;
+    list-style-type: none;
+
+}
+
+div.results.flex.results_poster_card div.item:nth-child(n+3) {
+    margin-top: 30px;
+    /* margin-right: 17px; */
+}
+div.results.flex.results_poster_card, div.results.flex.results_profile_card {
+    justify-content: space-between;
+}
+div.results.flex.results div.item:nth-child(-n+4), div.results.flex.results_backdrop_card div.item:nth-child(-n+2), div.results.flex.results_poster_card div.item:nth-child(-n+2) {
+    margin-top: 16px;
+}
+li {
+    display: list-item;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.primary a {
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-style: 'Source Sans Pro', Arial, sans-serif;
+}
+
+a.menu:hover {
+    background: #314b60;
+    box-shadow: inset 0 0 50px 1px darkcyan;
+}
+
+section.search {
+
+    width: 100%;
+    background-color: #fff;
+    height: 46px;
+    border-bottom: 1px solid #dedede;
+}
+
+header div.sub_media {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+header div.sub_media {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+div.sub_media {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+section.search form {
+    display: block;
+}
+
+/* div {
+    display: block;
+} */
+
+
+#search_v4 {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 0 30px;
+    height: 46px;
+    box-sizing: border-box;
+    -webkit-box-flex: unset;
+}
+
+#main {
+    box-sizing: border-box;
+    padding-top: 158px;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+div.media {
+    width: 1000px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+div.media h2.title {
+    display: inline-block;
+}
+
+div.results .flex .results_poster_card div.item.poster.card {
+    justify-content: space-between;
+
+}
+
+div.results.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.item.poster.card {
+    display: inline-flex;
+    align-items: center;
+}
+
+div.item.card {
+    width: 483px;
+    background-color:#fff;
+    box-sizing: border-box;
+}
+
+div .item.card div.wrapper div.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div.consensus.tight+div.flex {
+    margin-left: 10px;
+}
+
+div.item.card div.wrapper a {
+    width: 100%;
+    display: grid;
+    line-height: 1.1em;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+
+}
+div.item p a, div.item a {
+    color: #000;
+    font-weight: 400;
+}
+div.item.card div.wrapper span{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+
+
+.card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* background-color: #fff; */
+}
+
+div.item.poster.card div.image_content {
+    width: 185px;
+}
+
+div.item.poster div.image_content,
+div.item.backdrop div.image_content {
+    height: 278px;
+    line-height: 0;
+}
+
+div.image_content {
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+div.item.poster.card div.info {
+    width: 298px;
+    height: 278px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px 16px 16px 16px;
+    overflow: hidden;
+}
+
+div.item.card div.info div.wrapper span {
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 1.5em;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+div.results.flex div.item {
+    margin-top: 17px;
+    margin-right: 17px;
+    color: #000;
+}
+div.item.card p.view_more a {
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+div.item.card div.wrapper {
+    display: flex;
+}
+
+div.consensus.tight {
+    box-sizing: border-box;
+
+}
+
+div.item.card div.wrapper div.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div.consensus.tight+div.flex {
+    margin-left: 10px;
+}
+
+
+div.item p a,
+div.item a {
+    color: #000;
+    font-weight: 400;
+}
+
+div.consensus div.outer_ring {
+    border-radius: 50%;
+    padding: 4px;
+    background-color: #fff;
+}
+
+div.consensus div .percent {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+div.item.card p.overview {
+    word-wrap: break-word;
+    white-space: normal;
+    color: #4d4d4d;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    max-height: 5.7em;
+    margin-top: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis 
+}
+
+div.item p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+    width: 100%;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+div.item.card p.view_more {
+    border-top: 1px solid #e3e3e3;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+}
+
+div.item p:last-of-type {
+    margin-bottom: 0;
+}
+
+div.item p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+    width: 100%;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.4em;
+}

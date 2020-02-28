@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>task9</title>
+    <style>
+        #new {
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            height: 40px;
+            width: 100px;
+
+        }
+
+        #box {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="boxclone">
+        <button id="add" onclick="add(this)">+</button>
+        <input type="number" value="0" id="input">
+        <button id="dec" onclick="dec(this)">-</button>
+    </div>
+    <div id="maindiv">
+
+
+    </div>
+    <button id="new" onclick="next()">new</button>
+
+    <script>
+        var mainDiv = document.getElementById("maindiv");
+
+        function next() {
+            var original = document.getElementsByClassName('boxclone')[0];
+            var clone = original.cloneNode(true);
+            mainDiv.appendChild(clone);
+        }
+
+
+        function add(val) {
+            var parentDiv = val.parentElement;
+            var inputTxt = parentDiv.getElementsByTagName("INPUT")[0];
+            inputTxt.value++;
+
+        }
+
+
+        function dec(val) {
+            var parentDiv = val.parentElement;
+            var inputTxt = parentDiv.getElementsByTagName("input")[0];
+            inputTxt.value--;
+        }
+    </script>
+</body>
+
+</html>

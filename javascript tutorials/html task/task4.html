@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>task4</title>
+</head>
+
+<body>
+  <!-- Celsius to Fahrenheit converter -->
+
+  <div id="ctof">
+    Celsius:<input type="number" id="cec_to_fl" placeholder="Value" onkeyup="convert('cel')"> =
+    Fahrenheit:<input type="number" id="fah" placeholder="Value" onkeyup="convert('f')">
+    <p id="dd"></p>
+
+  </div>
+  <script>
+    //convert Cel to fah.
+    function convert(degree) {
+
+      if (degree == 'cel') {
+        var cel = document.getElementById('cec_to_fl').value * 9 / 5 + 32;
+        document.getElementById('fah').value = Math.round(cel);
+      } else {
+        var f = (document.getElementById('fah').value - 32) * 5 / 9;
+        document.getElementById('cec_to_fl').value = Math.round(f);
+      }
+    }
+  </script>
+</body>
+
+</html>

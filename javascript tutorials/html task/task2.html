@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>task 2</title>
+</head>
+
+<body>
+
+  <p id="hide" style="display: block; ">HIDE AND SHOW</p><br /><br>
+  <input type="button" class="bg-primary" value="Show Text" id="show" onclick="myFunction()">
+  <input type="button" value="Hide Text" class="bg-primary" id="hide" onclick="myFunction1()">
+  <hr>
+
+
+  <script type="text/javascript">
+    //Show/Hide text
+    function myFunction() {
+      var x = document.getElementById("hide");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      }
+    }
+
+    function myFunction1() {
+      var x = document.getElementById("hide");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

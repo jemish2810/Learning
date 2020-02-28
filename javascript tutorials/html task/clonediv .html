@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        #box {
+            margin: auto;
+            top: 200px;
+            left: 200px;
+            border: 1px solid gray;
+            border-radius: 20px;
+            width: 20%;
+            height: 15%;
+            padding: 25px;
+            background-color: black;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: mintcream;
+            margin-left: 13px;
+
+        }
+
+        button:hover {
+            background-color: lightseagreen;
+        }
+
+        input {
+            width: 60px;
+            height: 50px;
+            border: black;
+            border-radius: 10px;
+            font-size: 22px;
+            border: 1px solid black;
+
+        }
+    </style>
+    </head>
+    <div id="box">
+        <button id="add" class="add" onclick="add(this)">+</button>
+        <input type="number" value="0" id="input" class="inp">
+        <button id="dec" class="dec" onclick="dec(this)">-</button>
+ 
+    </div>
+    <button id="new" onclick="next()">new</button>
+    
+    <script>
+        var i = 1;
+        var original = document.getElementById('box');
+
+        function next() {
+            var clone = original.cloneNode(true);
+            clone.id = "box" + ++i;
+            original.parentNode.appendChild(clone);
+            //change id of all selector(inputbox, &button)
+            var v = document.getElementsByClassName("inp")[0].setAttribute("id", "input"+i);
+            var add = document.getElementsByClassName("add")[0].setAttribute("id", "add"+i);
+            var sub = document.getElementsByClassName("dec")[0].setAttribute("id", "dec"+i);
+          
+        }
+
+
+        function add(val) {
+            
+            var str1 = val.id;
+            var s = str1.slice(3 , 5);
+            var add = document.getElementById("input"+s).value;
+            add++;
+            document.getElementById("input"+s).value = add;
+        }
+       
+
+        function dec(val) {
+            var str2 = val.id;
+            var ss = str2.slice(3,5);
+            var sub = document.getElementById("input"+ss).value;
+            sub--;
+            document.getElementById("input"+ss).value = sub;
+        }
+    </script>
+</body>
+
+</html>

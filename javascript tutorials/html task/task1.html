@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task 1</title>
+</head>
+
+<body>
+    <!-- Textbox data. -->
+    <h3>Enter text</h3>
+    <input type="text" placeholder="Enter text ! !" id="text" oninput="myfun1()">
+    <p id="demo" style="position: fixed"></p><br /><br /><br />
+    <hr>
+    <script type="text/javascript">
+        function myfun1() {
+            var x = document.getElementById('text').value;
+            document.getElementById('demo').innerHTML = x;
+        }
+    </script>
+</body>
+
+</html>

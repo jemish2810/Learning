@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+          margin: 20px 20px;
+          display: block;
+        }
+        input{
+            display: block;
+            width: 100%;
+        }
+        #display{
+          width: 100%; 
+          height: 50%; 
+          border-radius: 5px;
+          background: #730aa2;
+          margin-top: 25px;
+          border: 1px solid darkcyan;
+        }
+        .colour_picker{
+          width: 720px;
+          height: 150px;
+          position: absolute; 
+          font-size: large;  
+        }
+    </style>
+</head>
+<body>
+    <b><div class="colour_picker" >
+        <h3>Colour picker</h3>
+        Red :<span class="red-value" >115</span>
+        <input type="range" id="red" min="0" max="255"  value="115">
+        
+        Green :<span class="green-value" >10</span>
+        <input type="range" id="green" min="0" max="255" value="10" >
+        
+        Blue :
+        <span class="blue-value" >162</span>
+        <input type="range" id="blue" min="0" max="255" value="162">
+        
+        <div id="display" > 
+
+        </div>  
+        
+  
+  
+       </div></b>   
+       <script type="text/javascript">
+          var input = document.querySelectorAll("input");
+          
+          for(var i = 0; i<input.length; i++){
+
+            input[i].addEventListener("input",fun());
+          }
+
+          function fun(){
+            
+            var r =document.getElementById('red').value;
+            var g = document.getElementById('green').value;
+            var b = document.getElementById('blue').value;
+            var display = document.getElementById("display");
+                display.style.background = "rgb("+r+","+g+","+b+")";  
+          }
+
+       </script>
+</body>
+</html></html>
+      
