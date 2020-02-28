@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            margin: 50px;
+        }
+        #leftDiv{
+            margin: auto;
+            top: 200px;
+            left: 200px;
+            border: 1px solid gray;
+            border-radius: 20px;
+            width: 16%;
+            height: 14%;
+            padding: 25px;
+            background-color: black;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            border: black;
+            border-radius: 10px;
+            background-color: mintcream;
+            margin-left: 5px;
+            margin-right: 5px;
+            font-size:22px;
+        }
+        button:hover{
+            background-color:lightseagreen;
+        }
+       
+        input{
+            width: 60px;
+            height:50px;
+            border: black;
+            border-radius: 10px;
+            font-size: 22px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div id="btn" style="width: 22px;">
+        <button id="eventBtn"style="width: 75px; background-color:gray">New</button>
+    </div>
+
+
+    <div id="leftDiv">
+        <button class="add">+</button>
+        <input type="number" value="0" id="input" class="inp">
+        <button id="dec" class="dec">-</button>
+    </div>
+
+    <div id="rightDiv">
+    </div>
+
+
+
+    <script>
+        var i = 0;
+        $(document).ready(function () {
+            $("#eventBtn").click(function () {
+               var c =  $("#leftDiv").clone();
+               $('#rightDiv').append(c);
+            });
+        });
+        $(document).on('click','.add',function(){
+            var otherInput = $(this).closest('div').find('.inp');
+            otherInput.val(++i);
+            
+        })
+        $(document).on('click','.dec',function(){
+            var otherInput = $(this).closest('div').find('.inp');
+            otherInput.val(--i);
+            
+        })
+    </script>
+
+
+
+
+</body>
+
+</html>

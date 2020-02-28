@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <title>Document</title>
+    <style>
+        body{
+            margin: 50px;
+        }
+        #box{
+            margin: auto;
+            top: 200px;
+            left: 200px;
+            border: 1px solid gray;
+            border-radius: 20px;
+            width: 16%;
+            height: 15%;
+            padding: 25px;
+            background-color: black;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            border: black;
+            border-radius: 10px;
+            background-color: mintcream;
+            margin-left: 5px;
+            margin-right: 5px;
+            font-size:22px;
+        }
+        button:hover{
+            background-color:lightseagreen;
+        }
+       
+        input{
+            width: 60px;
+            height:50px;
+            border: black;
+            border-radius: 10px;
+            font-size: 22px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <button id="add" value ="1" >+</button>
+        <input type="number" value="" id="input">
+        <button id= "dec" value="0" >-</button>
+      
+    </div>
+
+    <script>
+        $("button").click(function(){
+            var text = $(this).text();
+            console.log(text);
+            if(text == '+'){
+                var add = $("#input").val();
+                add++;
+                $("#input").val(add);
+            }
+            else if(text == '-'){
+                var dec = $("#input").val();
+                dec--;
+                $("#input").val(dec);
+            }
+        })
+    </script>
+
+
+
+
+</body>
+
+</html>

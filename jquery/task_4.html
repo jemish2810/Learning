@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="ctof">
+        Celsius:<input type="number" id="cec_to_fl" placeholder="Value"> =
+        Fahrenheit:<input type="number" id="fah" placeholder="Value">
+        <p id="total"></p>
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#cec_to_fl').on('keyup', function () {
+                var qty = $(this).val();
+                var result = Math.round(qty * 9 / 5 + 32);
+                $("#fah").val(result);
+            });
+            $("#fah").on('keyup', function () {
+
+                var price = $(this).val();
+                var result = Math.round((price - 32) * 5 / 9);
+                $("#cec_to_fl").val(result);
+
+            })
+
+        })
+    </script>
+</body>
+
+</html>
