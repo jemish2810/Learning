@@ -1,0 +1,119 @@
+
+**React**
+
+official document::
+https://reactjs.org/docs/getting-started.html
+
+https://www.w3schools.com/whatis/whatis_react.asp
+
+https://redpanthers.co/reactjs-for-beginners-a-step-by-step-approach/
+
+https://appdividend.com/react-tutorial/
+
+youtube channel 
+
+Codevolution
+https://www.youtube.com/channel/UC80PWRj_ZU8Zu0HSMNVwKWw
+
+https://www.youtube.com/watch?v=QFaFIcGhPoM&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3
+
+
+To do Given::
+
+Difference b/w react and react native 
+https://www.cognitiveclouds.com/insights/what-is-the-difference-between-react-js-and-react-native/
+
+React Native
+https://www.cognitiveclouds.com/insights/what-is-the-difference-between-react-js-and-react-native/
+
+
+
+
+Arrow function
+
+https://medium.freecodecamp.org/why-arrow-functions-and-bind-in-reacts-render-are-problematic-f1c08b060e36
+
+Redux form :
+https://medium.com/wolox-driving-innovation/https-medium-com-wolox-driving-innovation-easy-forms-in-react-native-with-redux-form-1cdc16a9a889
+
+https://medium.com/wolox/https-medium-com-wolox-driving-innovation-easy-forms-in-react-native-with-redux-form-1cdc16a9a889
+
+https://medium.com/@machnicki/handle-events-in-react-with-arrow-functions-ede88184bbb
+
+How to avoid Arrow function :
+https://medium.freecodecamp.org/react-pattern-extract-child-components-to-avoid-binding-e3ad8310725e
+
+
+Style guide : 
+https://github.com/airbnb/javascript/tree/master/react
+
+https://medium.com/groww-engineering/stateless-component-vs-pure-component-d2af88a1200b
+
+
+https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
+
+- > Component Overview
+    • - React native general components like (text , view , text input )
+      
+    • - conditional rendering components
+      
+    • - variable declaration and usage
+      
+- > Advance Component Overview
+
+5) Router
+- using (tab , stack , drawer) navigation
+
+6) KeyBoard avoid view
+- with different behaviours
+
+7) asynck storage
+
+8) Selection list
+
+
+- > React Native Props Manage
+
+    •  Props Type
+      
+    •  Render Element props
+      
+-> React Native State
+
+    •  state and Lifecycle
+      
+    •  Lifting State up
+      
+    •  event handling
+      
+
+-> Rest Api
+
+    •  GET , POST Method
+
+    •  With static json File
+      
+
+
+-> React Native Style
+
+    • - inLine Style
+      
+    • - Es6 Level Style
+      
+    • - Global Level Perform Style
+      
+
+-> React flex design practice (Login and sign up screen)
+
+
+-> React Native Third party depdency
+
+    • - installation and uninstallation dependency
+      
+    • - link / unlink dependency
+      
+
+-> React Redux
+
+-> Redux form
