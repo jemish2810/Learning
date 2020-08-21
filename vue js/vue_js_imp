@@ -1,0 +1,105 @@
+-------------------------------Vue js-------------------------------
+
+virtual dom vs dom 
+
+https://medium.com/@koheimikami/understanding-rendering-process-with-virtual-dom-in-vue-js-a6e602811782#:~:text=In%20general%2C%20a%20Virtual%20Dom,changes%20on%20the%20Virtual%20Dom.
+
+https://v1.vuejs.org/guide/installation.html
+https://www.tutorialspoint.com/vuejs/vuejs_overview.htm
+https://tutorialzine.com/2016/03/5-practical-examples-for-learning-vue-js
+
+https://appdividend.com/category/vue/
+vue js with datatable 
+https://appdividend.com/2018/06/07/vue-datatable-component-example/
+
+vue mastery Video 
+https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
+<script src = "https://unpkg.com/vue"></script>
+
+
+1) install vue js with cli 
+	npm install -g @vue/cli
+
+2) check version 
+	vue --version
+	sudo npm update -g @vue/cli
+
+3) update latest version 
+	sudo npm uninstall -g vue-cli
+	sudo npm install -g @vue/cli@latest
+
+4) create project 
+	vue create blog
+	select default 
+	npm run serve
+
+5) Routing
+https://router.vuejs.org/guide/#html
+npm  install vue-router
+main.js
+
+import VueRouter from "vue-router";
+import User from "./components/User.vue";
+import Home from "./components/Home.vue";
+Vue.use(VueRouter);
+
+
+ const routes = [
+   { path: "/", component: Home },
+   { path: "/user", component: User },
+ ];
+ const router = new VueRouter({
+   routes,
+   mode: "history",
+ });
+new Vue({
+  render: (h) => h(App),
+  router
+}).$mount("#app");
+
+app.vue
+<router-view></router-view>
+
+**add class active with conditon 
+<div class="[isActive ? activeClass : '']"></div> 
+
+data(){
+    isActive : true
+    activeClass : 'active'
+}
+
+***redirect next page
+1st way
+  <b-button v-on:click="$router.push('/movies/' +list.id)" variant="info">More info</b-button>
+
+2nd way
+<router-link :to="`/movies/${list.id}`"> 
+     <b-button variant="info">More info</b-button> 
+</router-link> 
+
+
+*lifecycle hooks*
+https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle
+https://flaviocopes.com/vue-cheat-sheet/
+
+**form validation 
+https://vuelidate.js.org/#sub-basic-form
+https://vuelidate.js.org/#getting-started
+https://vuejs.org/v2/cookbook/form-validation.html#Using-Custom-Validation
+https://webomnizz.com/form-handling-and-validation-with-vuejs/
+https://blog.logrocket.com/form-input-validation-in-vue-js-using-watchers/
+https://vuejsdevelopers.com/2018/08/27/vue-js-form-handling-vuelidate/
+
+
+****laravel with vue js 
+installation guide::-
+	composer require laravel/ui
+	php artisan ui vue
+	php artisan ui vue --auth
+	npm install
+	npm run dev
+
+
+*************vue pagination component in laravel 
+https://appdividend.com/2018/04/26/vue-pagination-tutorial-from-scratch/
+
